@@ -3,6 +3,8 @@
  */
 package org.applesline.forum.user.service;
 
+import java.util.List;
+
 import org.applesline.forum.user.model.User;
 
 /**
@@ -15,4 +17,6 @@ public interface UserService {
 	User getUser(Integer id);
 	
 	void addUser(User user);
+	
+	List<User> listUser();
 }

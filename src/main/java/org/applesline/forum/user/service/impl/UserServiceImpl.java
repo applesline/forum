@@ -3,6 +3,8 @@
  */
 package org.applesline.forum.user.service.impl;
 
+import java.util.List;
+
 import javax.annotation.PostConstruct;
 
 import org.applesline.forum.user.dao.UserDao;
@@ -44,6 +46,15 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void addUser(User user) {
 		userDao.addUser(user);
+	}
+
+	/* 
+	 * @see org.applesline.forum.user.service.UserService#listUser()
+	 */
+	@Override
+	public List<User> listUser() {
+		// TODO Auto-generated method stub
+		return userDao.listUser();
 	}
 
 }

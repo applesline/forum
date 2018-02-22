@@ -30,6 +30,14 @@ public class UserController {
 		return view;
 	}
 	
+	@RequestMapping("/listUser")
+	public ModelAndView listUser() {
+		ModelAndView view = new ModelAndView("/list.btl");
+		view.addObject("list", userService.listUser());
+		System.out.println(userService.listUser());
+		return view;
+	}
+	
 	@RequestMapping("/addUser")
 	public ModelAndView addUser(String username) {
 		ModelAndView view = new ModelAndView("/user.btl");
